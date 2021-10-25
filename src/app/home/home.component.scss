@@ -1,0 +1,50 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.example-card{
+    width: 20%;
+    text-align: center;
+    margin: 100px 0px;
+    height: 47%;
+    border-radius: 4%;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+mat-card-content{
+    font-size: 20px;
+
+}
+
+button{
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+}
+
+img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.container{
+    background-image: url("https://s1.1zoom.me/big3/793/Library_Book_532388_1920x1080.jpg");
+    height: calc(100vh - 64px);
+}
+
+mat-card-header{
+    display: block;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.mat-card-title{
+    font-size: 30px;
+}

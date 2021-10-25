@@ -1,0 +1,18 @@
+<div class="container">
+    <ng-container *ngIf="objetoEspanol">
+        <p class="titulo">{{objetoEspanol.palabra}}</p>
+        <p class="descripcion">Descripcion: {{objetoEspanol.descripcion}}</p>
+        <p class="fecha">Fecha Alta: {{objetoEspanol.fechaAlta}}</p>
+        <ng-container *ngIf="objetoEspanol.palabrasIngles.length > 0">
+            <p class="titulo2">Palabras en ingles:</p>
+            <ng-container *ngFor="let iterator of objetoEspanol.palabrasIngles">
+                <p class="centrado" [routerLink]="['/ingles/', iterator.palabra]">{{iterator.palabra}}</p>
+            </ng-container>
+
+        </ng-container>
+
+    </ng-container>
+</div>
+<div class="example-button-row">
+    <button mat-raised-button color="primary" class="centro" routerLink="../">Ir Atras</button>
+</div>

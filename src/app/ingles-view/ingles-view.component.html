@@ -1,0 +1,11 @@
+<div class="container">
+    <ng-container *ngIf="objetoIngles">
+        <p class="titulo">{{objetoIngles.palabra}}</p>
+        <p class="fecha">Fecha Alta: {{objetoIngles.fechaAlta}}</p>
+        <p class="descripcion"><b>Translation: </b>{{objetoIngles.palabraEspanol}}</p>
+    </ng-container>
+
+</div>
+<div class="example-button-row">
+    <button mat-raised-button color="primary" class="centro" routerLink="../">Ir Atras</button>
+</div>
