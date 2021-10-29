@@ -26,13 +26,13 @@ export class InglesViewComponent implements OnInit {
         this.getWordData(this.palabra);
       })
   }
-
-  private getWordData(palabra: string){
+  public fecha: any;
+  private getWordData(palabra: string) {
     this.service.getObjectViewIngles(palabra)
-    .subscribe(data =>{
-      this.objetoIngles = data
-      console.log(this.objetoIngles);
-    })    
+      .subscribe((data: any) => {
+        this.objetoIngles = data
+        this.fecha = new Date(data.fechaAlta).toLocaleDateString()
+      })
   }
 
 

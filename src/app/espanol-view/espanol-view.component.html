@@ -2,7 +2,7 @@
     <ng-container *ngIf="objetoEspanol">
         <p class="titulo">{{objetoEspanol.palabra}}</p>
         <p class="descripcion">Descripcion: {{objetoEspanol.descripcion}}</p>
-        <p class="fecha">Fecha Alta: {{objetoEspanol.fechaAlta}}</p>
+        <p class="fecha">Fecha Alta: {{fecha}}</p>
         <ng-container *ngIf="objetoEspanol.palabrasIngles.length > 0">
             <p class="titulo2">Palabras en ingles:</p>
             <ng-container *ngFor="let iterator of objetoEspanol.palabrasIngles">

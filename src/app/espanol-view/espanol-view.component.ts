@@ -27,12 +27,13 @@ export class EspanolViewComponent implements OnInit {
       })
   }
 
-  private getWordData(palabra: string){
+  public fecha: any;
+  private getWordData(palabra: string) {
     this.service.getObjectViewEspanol(palabra)
-    .subscribe(data =>{
-      this.objetoEspanol = data
-      console.log(this.objetoEspanol);
-    })    
+      .subscribe((data: any) => {
+        this.objetoEspanol = data
+        this.fecha = new Date(data.fechaAlta).toLocaleDateString()
+      })
   }
 
 

@@ -52,7 +52,6 @@ export class AddEspanolComponent implements OnInit {
           'success'
         );
       }, error => {
-        console.error('error', error)
         Swal.fire({
           icon: 'error',
           title: 'Oops...',

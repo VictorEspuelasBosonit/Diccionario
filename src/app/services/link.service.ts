@@ -17,8 +17,8 @@ export class LinkService {
 
   public insert(palabra: string, desc: string) {
     return this.http.post('http://localhost:8080/espanol/', {
-      "palabra": palabra,
-      "descripcion": desc
+      "palabra": palabra.trim(),
+      "descripcion": desc.trim()
     })
   }
 
@@ -28,8 +28,8 @@ export class LinkService {
 
   public update(palabra: string, desc: string, palabraAntigua2: string): Observable<any> {
     return this.http.put('http://localhost:8080/espanol/' + palabraAntigua2, {
-      "palabra": palabra,
-      "descripcion": desc
+      "palabra": palabra.trim(),
+      "descripcion": desc.trim()
     })
   }
 
@@ -39,8 +39,8 @@ export class LinkService {
 
   public insertIngles(palabra: string, palabraEspanol: string) {
     return this.http.post('http://localhost:8080/ingles/', {
-      "palabra": palabra,
-      "palabraEspanol": palabraEspanol
+      "palabra": palabra.trim(),
+      "palabraEspanol": palabraEspanol.trim()
     })
   }
 
@@ -50,14 +50,12 @@ export class LinkService {
 
   public updateIngles(palabra: string, palabraEspanol: string, palabraAntigua: string): Observable<any> {
     return this.http.put('http://localhost:8080/ingles/' + palabraAntigua, {
-      "palabra": palabra,
-      "palabraEspanol": palabraEspanol
+      "palabra": palabra.trim(),
+      "palabraEspanol": palabraEspanol.trim()
     })
   }
 
   public getDataIngles() {
-    console.log("servicio")
-
    return this.http.get("http://localhost:8080/ingles/")
   }
 

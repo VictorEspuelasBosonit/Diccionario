@@ -57,9 +57,6 @@ export class ContentComponent implements OnInit {
   }
 
   public eliminar(item: any) {
-
-
-
     Swal.fire({
       title: '¿Estas seguro de eliminar esta palabra?',
       text: "¡No podras deshacer esta accion!",
@@ -80,7 +77,6 @@ export class ContentComponent implements OnInit {
         )
       }
     })
-
   }
 
   public updatear(item: any) {
@@ -92,13 +88,11 @@ export class ContentComponent implements OnInit {
         this.conexion.update(data.palabra, data.descripcion, data.palabraAntigua2)
           .subscribe((data) => {
             this.conexion.getData()
-            .subscribe((data) => this.dataSource.data = data as Data[]);
+              .subscribe((data) => this.dataSource.data = data as Data[]);
           }, error => {
-
           })
       })
   }
-
 
   public view(item: any) {
     this.dialog.open(AddEspanolComponent, {
@@ -110,6 +104,4 @@ export class ContentComponent implements OnInit {
     let resp = this.conexion.getData();
     resp.subscribe(report => this.dataSource.data = report as Data[]);
   }
-
-
 }

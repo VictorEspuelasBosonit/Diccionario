@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-ingles',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InglesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private _ac: ActivatedRoute
+  ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log(this._ac.snapshot.data.id);
+    
   }
 
 }

@@ -61,7 +61,6 @@ export class ContentenglishComponent implements OnInit {
       cancelButtonColor: '#d33',
       confirmButtonText: 'Si, eliminar!'
     }).then((result) => {
-      console.log(result);
       if (result.isConfirmed) {
         this.conexion.deleteIngles(item.palabra)
           .subscribe(() => this.getAllReports());
